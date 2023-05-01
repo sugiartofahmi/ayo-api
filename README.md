@@ -1,6 +1,6 @@
 # Asean Youth Forum (AYO) Project API
 
-This website-based application can be accessed from a desktop or mobile browser. This application is a forum for youth, especially in ASEAN, to receive, convey, and seek all kinds of information, ideas, or criticism that can provide a sense of security and comfort for youth in ASEAN. In addition, this web-based platform displays some accurate information or news in response to current issues in ASEAN.
+Build json server to facilitate the development process of the project group.
 
 ## Installation
 
