@@ -8,6 +8,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "json-server": "^0.17.3"
+    "fs": "^0.0.1-security",
+    "json-server": "^0.17.3",
+    "path": "^0.12.7"
   }
 }
