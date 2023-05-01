@@ -1,0 +1,13 @@
+{
+  "articles": [],
+  "comments": [],
+  "users": [
+    {
+      "id": 1,
+      "email": "sugiartofahmi@gmail.com",
+      "fname": "fahmi",
+      "lname": "sugiarto",
+      "password": "12345678"
+    }
+  ]
+}
