@@ -1,17 +1,21 @@
 import jsonServer from "json-server";
 import cors from "cors";
-import fs from "fs";
 import path from "path";
+import chokidar from "chokidar";
 import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const data = JSON.parse(fs.readFileSync(path.join(__dirname, "db/db.json")));
+const port = 3000;
+const router = jsonServer.router("db/db.json");
 const server = jsonServer.create();
-const router = jsonServer.router(data);
-const middlewares = jsonServer.defaults();
-const port = 3002;
+const watcher = chokidar.watch(path.join(__dirname, "db/db.json"));
+watcher.on("change", () => {
+  console.log("Reloading JSON Server data...");
+  router.db.read();
+  router.db.setState(router.db.getState());
+});
 server.use(cors());
-server.use(middlewares);
+server.use(jsonServer.defaults());
 server.use(router);
 server.listen(port, () => {
   console.log("JSON Server is running");

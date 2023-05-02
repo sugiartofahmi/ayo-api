@@ -24,6 +24,16 @@ Run project
   yarn start
 ```
 
+Development
+
+```bash
+  npm run dev
+```
+
+```bash
+  yarn dev
+```
+
 ## Tech Stack
 
 Json Server, git, github, vercel
